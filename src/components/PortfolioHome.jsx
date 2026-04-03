@@ -581,13 +581,6 @@ const handleSubmit = async () => {
   return (
     <div className="page">
       <div className="contact-grid">
-        <div className="contact-detail-card">
-          <div className="contact-icon">📞</div>
-          <div>
-            <div className="label">Phone</div>
-            <div className="value">8973513797</div>
-          </div>
-        </div>
 
         <div className="contact-detail-card">
           <div className="contact-icon">📧</div>
