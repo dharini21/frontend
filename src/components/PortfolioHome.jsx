@@ -586,6 +586,8 @@ function About() {
 }
 
 // ─── CONTACT ─────────────────────────────────────────────────
+import axios from "axios";
+
 function Contact() {
   const [form, setForm]       = useState({ name: "", email: "", message: "" });
   const [errors, setErrors]   = useState({});
@@ -621,19 +623,13 @@ function Contact() {
     setStatus(null);
 
     try {
-      const res = await fetch(`${API_URL}/send-email`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: form.name,
-          email: form.email,
-          message: form.message
-        }),
+      const { data } = await axios.post(`${API_URL}/send-email`, {
+        name: form.name,
+        email: form.email,
+        message: form.message,
       });
 
-      const data = await res.json();
-
-      if (res.ok && data.success) {
+      if (data.success) {
         setStatus("success");
         setForm({ name: "", email: "", message: "" });
       } else {
