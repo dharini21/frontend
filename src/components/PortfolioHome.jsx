@@ -63,7 +63,7 @@ const styles = `
     font-family: 'Outfit', sans-serif;
     font-size: 0.95rem;
     font-weight: 500;
-    color: #555;
+    color: #000000;
     cursor: pointer;
     padding: 8px 16px;
     border-radius: 8px;
@@ -72,6 +72,73 @@ const styles = `
 
   .nav-links button:hover { background: #f3e8ff; color: #7c3aed; }
   .nav-links button.active { background: #7c3aed; color: #fff; }
+
+  /* ── HAMBURGER ── */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+
+  .hamburger:hover { background: #f3e8ff; }
+
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #7c3aed;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ── MOBILE MENU ── */
+  .mobile-menu {
+    position: absolute;
+    top: 76px;
+    left: 24px;
+    right: 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(124,58,237,0.15);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 99;
+  }
+
+  .mobile-menu button {
+    background: none;
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.2s;
+  }
+
+  .mobile-menu button:hover { background: #f3e8ff; color: #7c3aed; }
+  .mobile-menu button.active { background: #7c3aed; color: #fff; }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+  }
 
   /* ── PAGE ── */
   .page {
@@ -97,14 +164,14 @@ const styles = `
   }
 
   .hero-avatar {
-  width: 220px;
-  height: 280px;
-  border-radius: 10px; /* 👈 square with slight rounding */
-  object-fit: cover;
-  border: 4px solid #7c3aed;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 24px rgba(124,58,237,0.2);
-}
+    width: 220px;
+    height: 280px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 4px solid #7c3aed;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 24px rgba(124,58,237,0.2);
+  }
 
   .home-hero h1 {
     font-family: 'Playfair Display', serif;
@@ -389,6 +456,7 @@ const styles = `
     .home-hero h1 { font-size: 2rem; }
     .card, .home-projects, .contact-form-card { padding: 24px; }
     .nav { margin: 8px 12px 0; padding: 0 16px; }
+    .mobile-menu { left: 12px; right: 12px; }
   }
 `;
 
@@ -523,7 +591,8 @@ function Contact() {
   const [errors, setErrors]   = useState({});
   const [status, setStatus]   = useState(null);
   const [loading, setLoading] = useState(false);
-const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const validate = () => {
     const e = {};
     if (!form.name.trim()) e.name = "Name is required.";
@@ -541,42 +610,41 @@ const API_URL = import.meta.env.VITE_API_URL;
     if (errors[e.target.name]) setErrors({ ...errors, [e.target.name]: null });
   };
 
-const handleSubmit = async () => {
-  const validationErrors = validate();
-  if (Object.keys(validationErrors).length > 0) {
-    setErrors(validationErrors);
-    return;
-  }
-
-  setLoading(true);
-  setStatus(null);
-
-  try {
-    const res = await fetch(`${API_URL}/send-email`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: form.name,
-        email: form.email,
-        message: form.message
-      }),
-    });
-
-    const data = await res.json();
-
-    if (res.ok && data.success) {
-      setStatus("success");
-      setForm({ name: "", email: "", message: "" });
-    } else {
-      setStatus("error");
+  const handleSubmit = async () => {
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
     }
 
-  } catch {
-    setStatus("error");
-  } finally {
-    setLoading(false);
-  }
-};
+    setLoading(true);
+    setStatus(null);
+
+    try {
+      const res = await fetch(`${API_URL}/send-email`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          message: form.message
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setStatus("success");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="page">
@@ -647,19 +715,23 @@ const handleSubmit = async () => {
 // ─── APP ─────────────────────────────────────────────────────
 export default function App() {
   const [page, setPage] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(prev => !prev);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
       <style>{styles}</style>
 
       <nav className="nav">
-        {/* Profile photo + name */}
+        {/* Logo + Name */}
         <div className="nav-left">
           <img src="/srilogo.png" alt="Sri Dharini S" className="nav-avatar" />
           <span className="nav-brand">Sri Dharini S</span>
         </div>
 
-        {/* Navigation links */}
+        {/* Desktop links */}
         <ul className="nav-links">
           {["home", "about", "contact"].map(p => (
             <li key={p}>
@@ -669,6 +741,32 @@ export default function App() {
             </li>
           ))}
         </ul>
+
+        {/* Hamburger button (mobile only) */}
+        <button
+          className={`hamburger ${menuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        {/* Mobile dropdown */}
+        {menuOpen && (
+          <div className="mobile-menu">
+            {["home", "about", "contact"].map(p => (
+              <button
+                key={p}
+                className={page === p ? "active" : ""}
+                onClick={() => { setPage(p); closeMenu(); }}
+              >
+                {p.charAt(0).toUpperCase() + p.slice(1)}
+              </button>
+            ))}
+          </div>
+        )}
       </nav>
 
       {page === "home"    && <Home navigate={setPage} />}
