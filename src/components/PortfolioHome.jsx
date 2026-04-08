@@ -584,20 +584,24 @@ function About() {
     </div>
   );
 }
+//contact 
 
-// ─── CONTACT ─────────────────────────────────────────────────
-import axios from "axios";
+import emailjs from '@emailjs/browser';
+
+// 🔧 Paste your EmailJS credentials here
+const EMAILJS_SERVICE_ID  = "service_ff1ostc";   // Dashboard → Email Services → Service ID
+const EMAILJS_TEMPLATE_ID = "template_6scc1ng";  // Dashboard → Email Templates → Template ID
+const EMAILJS_PUBLIC_KEY  = "pYSoapfIt04j7cAs8"; // Dashboard → Account → Public Key
 
 function Contact() {
   const [form, setForm]       = useState({ name: "", email: "", message: "" });
   const [errors, setErrors]   = useState({});
   const [status, setStatus]   = useState(null);
   const [loading, setLoading] = useState(false);
-  const API_URL = import.meta.env.VITE_API_URL;
 
   const validate = () => {
     const e = {};
-    if (!form.name.trim()) e.name = "Name is required.";
+    if (!form.name.trim())    e.name    = "Name is required.";
     if (!form.email.trim()) {
       e.email = "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
@@ -623,18 +627,19 @@ function Contact() {
     setStatus(null);
 
     try {
-      const { data } = await axios.post(`${API_URL}/send-email`, {
-        name: form.name,
-        email: form.email,
-        message: form.message,
-      });
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name:  form.name,
+          from_email: form.email,
+          message:    form.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
 
-      if (data.success) {
-        setStatus("success");
-        setForm({ name: "", email: "", message: "" });
-      } else {
-        setStatus("error");
-      }
+      setStatus("success");
+      setForm({ name: "", email: "", message: "" });
     } catch {
       setStatus("error");
     } finally {
@@ -667,6 +672,7 @@ function Contact() {
             </div>
           </div>
         </div>
+
       </div>
 
       <div className="contact-form-card">
@@ -676,27 +682,45 @@ function Contact() {
           <div className="alert alert-success">✅ Message sent! I'll get back to you soon.</div>
         )}
         {status === "error" && (
-          <div className="alert alert-error">❌ Something went wrong. Make sure the backend is running on port 5000.</div>
+          <div className="alert alert-error">❌ Something went wrong. Please try again.</div>
         )}
 
         <div className="form-group">
           <label>Your Name</label>
-          <input type="text" name="name" placeholder="John Doe"
-            value={form.name} onChange={handleChange} className={errors.name ? "error" : ""} />
+          <input
+            type="text"
+            name="name"
+            placeholder="John Doe"
+            value={form.name}
+            onChange={handleChange}
+            className={errors.name ? "error" : ""}
+          />
           {errors.name && <div className="error-text">{errors.name}</div>}
         </div>
 
         <div className="form-group">
           <label>Email Address</label>
-          <input type="email" name="email" placeholder="john@email.com"
-            value={form.email} onChange={handleChange} className={errors.email ? "error" : ""} />
+          <input
+            type="email"
+            name="email"
+            placeholder="john@email.com"
+            value={form.email}
+            onChange={handleChange}
+            className={errors.email ? "error" : ""}
+          />
           {errors.email && <div className="error-text">{errors.email}</div>}
         </div>
 
         <div className="form-group">
           <label>Message</label>
-          <textarea rows="5" name="message" placeholder="Hi Sri, I'd love to connect..."
-            value={form.message} onChange={handleChange} className={errors.message ? "error" : ""} />
+          <textarea
+            rows="5"
+            name="message"
+            placeholder="Hi Sri, I'd love to connect..."
+            value={form.message}
+            onChange={handleChange}
+            className={errors.message ? "error" : ""}
+          />
           {errors.message && <div className="error-text">{errors.message}</div>}
         </div>
 
