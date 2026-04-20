@@ -467,48 +467,113 @@ function Home({ navigate }) {
       <div className="home-hero">
         <img src="/srilogo.png" alt="Sri Dharini S" className="hero-avatar" />
         <h1>Sri Dharini S</h1>
-        <p className="tagline">IT Graduate · MERN Stack Intern · Aspiring Developer</p>
-        <p className="summary">
-          Motivated IT graduate with hands-on experience in MERN stack development and 10 months as a
-          Background Verification Specialist at Neeyamo. Skilled in building full-stack applications,
-          handling confidential data, and meeting deadlines. Seeking IT opportunities to apply and enhance
-          technical skills while contributing to organizational growth.
+        <p className="tagline">
+          IT Graduate · MERN Stack Intern · Aspiring Developer
         </p>
-        <button className="btn-primary" onClick={() => navigate("about")}>View My Profile</button>
-        <button className="btn-outline" onClick={() => navigate("contact")}>Get In Touch</button>
+        <p className="summary">
+          Results-driven IT graduate with hands-on experience in MERN stack
+          development and 10 months of industry experience at Neeyamo.
+          Demonstrated ability to develop full-stack applications, implement
+          secure authentication systems, and manage structured data efficiently.
+          Strong background in handling sensitive information, ensuring data
+          accuracy, and meeting tight deadlines. Actively seeking an entry-level
+          software development role to apply technical skills and contribute to
+          business solutions.
+        </p>
+        <button className="btn-primary" onClick={() => navigate("about")}>
+          View My Profile
+        </button>
+        <button className="btn-outline" onClick={() => navigate("contact")}>
+          Get In Touch
+        </button>
       </div>
 
       <div className="home-projects">
         <h2 className="section-title">Projects</h2>
 
         <div className="project-card">
-          <h3>Doctor User Appointment System (MERN Stack Application)</h3>
-          <div className="date">Mar 2026 – May 2026</div>
+          <h3>STUDENT RESULT MANAGEMENT SYSTEM (MERN Stack Application)</h3>
+          <div className="date">Dec 2025 – Apr 2026</div>
           <ul>
-            <li>Built a full-stack application using the MERN stack (MongoDB, Express, React, Node.js).</li>
-            <li>Implemented user authentication, appointment scheduling, and data management features.</li>
-            <li>Applied modular architecture to ensure scalability and clean code structure.</li>
-            <li>Gained hands-on experience in end-to-end MERN stack development.</li>
+            <li>
+              Developed a full-stack Student Result Management System using the
+              MERN stack (MongoDB, Express.js, React, Node.js).
+            </li>
+            <li>
+              Implemented role-based authentication for Admin (email/password)
+              and Students (class & roll number).
+            </li>
+            <li>
+              Built complete CRUD operations for managing admins, students,
+              subjects, and subject marks.
+            </li>
+            <li>
+              Designed a modular backend architecture with structured models for
+              scalability and maintainability.
+            </li>
+            <li>
+              Established relationships between students, subjects, and marks
+              for efficient data handling.
+            </li>
+            <li>
+              Implemented automatic total marks calculation based on
+              subject-wise scores (e.g., 486/500).
+            </li>
+            <li>
+              Developed functionality to generate and download marksheets in PDF
+              format dynamically.
+            </li>
+            <li>
+              Created responsive Admin and Student dashboards using React with
+              real-time data integration.
+            </li>
           </ul>
         </div>
 
         <div className="project-card">
-          <h3>Personal Portfolio</h3>
+          <h3>PERSONAL PORTFOLIO</h3>
           <ul>
-            <li>Built a responsive personal portfolio using React.js to showcase projects and skills, with backend integration enabling email communication via Nodemailer.</li>
+            <li>
+              Developed a responsive personal portfolio website using React.js
+              to showcase projects, skills, and contact information.
+            </li>
+            <li>
+              Designed a clean and modern user interface with a focus on user
+              experience and accessibility.
+            </li>
+            <li>
+              Integrated EmailJS to enable direct email communication through
+              the contact form without a backend.
+            </li>
+            <li>
+              Implemented component-based architecture for better code
+              reusability and maintainability.
+            </li>
+            <li>
+              Optimized the website for different screen sizes using responsive
+              design techniques.
+            </li>
+            <li>
+              Deployed the portfolio online using Netlify for fast and reliable
+              hosting.
+            </li>
           </ul>
         </div>
 
-        <h2 className="section-title" style={{ marginTop: 28 }}>Certifications</h2>
+        <h2 className="section-title" style={{ marginTop: 28 }}>
+          Certifications
+        </h2>
         <div className="cert-list">
           {[
             "TCS iON Career Edge – Young Professional",
             "Python Programming – SSI Education",
             "Postman API Fundamentals – Postman Academy",
             "Node.js – Absera Academy",
-            "Typewriting English Junior"
-          ].map(c => (
-            <span className="cert-badge" key={c}>{c}</span>
+            "Typewriting English Junior",
+          ].map((c) => (
+            <span className="cert-badge" key={c}>
+              {c}
+            </span>
           ))}
         </div>
       </div>
@@ -519,24 +584,35 @@ function Home({ navigate }) {
 // ─── ABOUT ───────────────────────────────────────────────────
 function About() {
   const skillSections = [
-    { label: "Frontend",  skills: ["React.js", "HTML", "CSS", "JavaScript"] },
-    { label: "Backend",   skills: ["Node.js", "Express.js"] },
-    { label: "Database",  skills: ["MongoDB", "Mongoose"] },
-    { label: "Tools",     skills: ["Git", "Postman", "VS Code"] },
-    { label: "Concepts",  skills: ["REST API", "CRUD Operations", "Authentication", "Async Programming"] },
+    { label: "Frontend", skills: ["React.js", "HTML", "CSS", "JavaScript"] },
+    { label: "Backend", skills: ["Node.js", "Express.js"] },
+    { label: "Database", skills: ["MongoDB", "Mongoose"] },
+    { label: "Tools", skills: ["Git", "Postman", "VS Code"] },
+    {
+      label: "Concepts",
+      skills: [
+        "REST API",
+        "CRUD Operations",
+        "Authentication",
+        "Async Programming",
+      ],
+    },
   ];
 
   return (
     <div className="page">
       <div className="about-grid">
-
         <div className="card">
           <h2 className="section-title">Technical Skills</h2>
           {skillSections.map(({ label, skills }) => (
             <div key={label} style={{ marginBottom: "16px" }}>
               <div className="skill-category-label">{label}</div>
               <div className="skills-grid">
-                {skills.map(s => <div className="skill-item" key={s}>{s}</div>)}
+                {skills.map((s) => (
+                  <div className="skill-item" key={s}>
+                    {s}
+                  </div>
+                ))}
               </div>
             </div>
           ))}
@@ -545,11 +621,27 @@ function About() {
         <div className="card">
           <h2 className="section-title">Education</h2>
           <div className="timeline-item">
-            <h3>B.Sc. Information Technology</h3>
+            <h3>Bachelor of Science in Information Technology</h3>
             <div className="org">The Madura College</div>
             <span className="date-badge">2021 – 2024</span>
-            <p style={{ fontSize: "0.9rem", color: "#555" }}>CGPA: <strong>8.1</strong></p>
+            <p style={{ fontSize: "0.9rem", color: "#555" }}>
+              CGPA: <strong>8.1</strong>
+            </p>
           </div>
+          <div className="timeline-item">
+            <h3>Sourashtra Girls Higher Secondary School</h3>
+            <div className="org">HSC</div>
+            <span className="date-badge">2020 – 2021</span>
+            <p style={{ fontSize: "0.9rem", color: "#555" }}>
+              PERCENTAGE: <strong>83%</strong>
+            </p>
+            <div className="org">SSLC</div>
+            <span className="date-badge">2018 – 2019</span>
+            <p style={{ fontSize: "0.9rem", color: "#555" }}>
+              PERCENTAGE: <strong>74%</strong>
+            </p>
+          </div>
+          
         </div>
 
         <div className="card">
@@ -558,12 +650,40 @@ function About() {
           <div className="timeline-item">
             <h3>MERN Stack Intern</h3>
             <div className="org">SharpenedMind Tech</div>
-            <span className="date-badge">Mar 2026 – May 2026</span>
+            <span className="date-badge">Dec 2025 – Mar 2026</span>
             <ul>
-              <li>Built a Doctor-User Appointment System using the MERN stack.</li>
-              <li>Developed RESTful APIs with Node.js and Express.js for scheduling and authentication.</li>
-              <li>Designed responsive UI components using React.js.</li>
-              <li>Managed data with MongoDB and Mongoose for appointments and user records.</li>
+              <li>
+                Implemented role-based authentication for Admin and Student
+                using JWT for secure access control.
+              </li>
+              <li>
+                Developed complete CRUD functionality for managing students,
+                subjects, and subject marks.
+              </li>
+              <li>
+                Structured MongoDB schemas using Mongoose to handle
+                relationships between students, subjects, and marks.
+              </li>
+              <li>
+                Implemented automatic total marks calculation based on
+                subject-wise scores.
+              </li>
+              <li>
+                Built functionality to generate and download student marksheets
+                in PDF format.
+              </li>
+              <li>
+                Designed modular and scalable backend architecture for
+                maintainable code structure.
+              </li>
+              <li>
+                Integrated frontend and backend using REST APIs for real-time
+                data updates.
+              </li>
+              <li>
+                Handled form validation and error management to improve
+                application reliability.
+              </li>
             </ul>
           </div>
 
@@ -572,36 +692,55 @@ function About() {
             <div className="org">Neeyamo Enterprise Solutions</div>
             <span className="date-badge">Mar 2025 – Dec 2025</span>
             <ul>
-              <li>Performed U.S. criminal background checks ensuring accuracy and timely case completion.</li>
-              <li>Reviewed legal records and documentation to identify discrepancies.</li>
-              <li>Maintained confidentiality and achieved daily/weekly targets.</li>
-              <li>Coordinated with teams to resolve verification issues efficiently.</li>
+              <li>
+                Performed U.S. criminal background checks by analyzing court
+                records and verifying candidate information.
+              </li>
+              <li>
+                Reviewed legal documents to identify discrepancies and ensure
+                accuracy in reports.
+              </li>
+              <li>
+                Maintained strict confidentiality while handling sensitive
+                candidate data.
+              </li>
+              <li>
+                Met daily and weekly turnaround time (TAT) targets with
+                consistent quality.
+              </li>
+              <li>
+                Collaborated with internal teams to resolve verification issues
+                efficiently.
+              </li>
+              <li>
+                Managed multiple cases simultaneously while ensuring timely and
+                accurate completion.
+              </li>
             </ul>
           </div>
         </div>
-
       </div>
     </div>
   );
 }
-//contact 
+//contact
 
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 // 🔧 Paste your EmailJS credentials here
-const EMAILJS_SERVICE_ID  = "service_ff1ostc";   // Dashboard → Email Services → Service ID
-const EMAILJS_TEMPLATE_ID = "template_6scc1ng";  // Dashboard → Email Templates → Template ID
-const EMAILJS_PUBLIC_KEY  = "pYSoapfIt04j7cAs8"; // Dashboard → Account → Public Key
+const EMAILJS_SERVICE_ID = "service_ff1ostc"; // Dashboard → Email Services → Service ID
+const EMAILJS_TEMPLATE_ID = "template_6scc1ng"; // Dashboard → Email Templates → Template ID
+const EMAILJS_PUBLIC_KEY = "pYSoapfIt04j7cAs8"; // Dashboard → Account → Public Key
 
 function Contact() {
-  const [form, setForm]       = useState({ name: "", email: "", message: "" });
-  const [errors, setErrors]   = useState({});
-  const [status, setStatus]   = useState(null);
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const validate = () => {
     const e = {};
-    if (!form.name.trim())    e.name    = "Name is required.";
+    if (!form.name.trim()) e.name = "Name is required.";
     if (!form.email.trim()) {
       e.email = "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
@@ -631,11 +770,11 @@ function Contact() {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         {
-          from_name:  form.name,
+          from_name: form.name,
           from_email: form.email,
-          message:    form.message,
+          message: form.message,
         },
-        EMAILJS_PUBLIC_KEY
+        EMAILJS_PUBLIC_KEY,
       );
 
       setStatus("success");
@@ -650,39 +789,82 @@ function Contact() {
   return (
     <div className="page">
       <div className="contact-grid">
-
         <div className="contact-detail-card">
           <div className="contact-icon">📧</div>
           <div>
             <div className="label">Email</div>
             <div className="value">
-              <a href="mailto:sridharini2103@gmail.com">sridharini2103@gmail.com</a>
+              <a href="mailto:sridharini2103@gmail.com">
+                sridharini2103@gmail.com
+              </a>
             </div>
           </div>
         </div>
+
+        <div className="contact-detail-card">
+  <div className="contact-icon">
+     <svg
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="6" ry="6" fill="#E1306C" />
+      <rect x="2" y="2" width="20" height="20" rx="6" ry="6" fill="url(#ig-grad)" />
+      <defs>
+        <linearGradient id="ig-grad" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stopColor="#f09433" />
+          <stop offset="25%" stopColor="#e6683c" />
+          <stop offset="50%" stopColor="#dc2743" />
+          <stop offset="75%" stopColor="#cc2366" />
+          <stop offset="100%" stopColor="#bc1888" />
+        </linearGradient>
+      </defs>
+      <circle cx="12" cy="12" r="4.5" stroke="white" strokeWidth="1.8" fill="none" />
+      <circle cx="17.2" cy="6.8" r="1.2" fill="white" />
+      </svg>
+  </div>
+  <div>
+    
+    <div className="label">Instagram</div>
+    <div className="value">
+      <a href="https://www.instagram.com/sri_dharini21/" target="_blank" rel="noopener noreferrer">
+        @sri_dharini21
+      </a>
+    </div>
+  </div>
+</div>
 
         <div className="contact-detail-card" style={{ gridColumn: "1 / -1" }}>
           <div className="contact-icon">💼</div>
           <div>
             <div className="label">LinkedIn</div>
             <div className="value">
-              <a href="https://www.linkedin.com/in/sri-dharini-301154293" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.linkedin.com/in/sri-dharini-301154293"
+                target="_blank"
+                rel="noreferrer"
+              >
                 linkedin.com/in/sri-dharini-301154293
               </a>
             </div>
           </div>
         </div>
-
       </div>
 
       <div className="contact-form-card">
         <h2 className="section-title">Send a Message</h2>
 
         {status === "success" && (
-          <div className="alert alert-success">✅ Message sent! I'll get back to you soon.</div>
+          <div className="alert alert-success">
+            ✅ Message sent! I'll get back to you soon.
+          </div>
         )}
         {status === "error" && (
-          <div className="alert alert-error">❌ Something went wrong. Please try again.</div>
+          <div className="alert alert-error">
+            ❌ Something went wrong. Please try again.
+          </div>
         )}
 
         <div className="form-group">
@@ -724,7 +906,11 @@ function Contact() {
           {errors.message && <div className="error-text">{errors.message}</div>}
         </div>
 
-        <button className="btn-primary" onClick={handleSubmit} disabled={loading}>
+        <button
+          className="btn-primary"
+          onClick={handleSubmit}
+          disabled={loading}
+        >
           {loading ? "Sending..." : "Send Message 🚀"}
         </button>
       </div>
@@ -737,7 +923,7 @@ export default function App() {
   const [page, setPage] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(prev => !prev);
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -753,9 +939,12 @@ export default function App() {
 
         {/* Desktop links */}
         <ul className="nav-links">
-          {["home", "about", "contact"].map(p => (
+          {["home", "about", "contact"].map((p) => (
             <li key={p}>
-              <button className={page === p ? "active" : ""} onClick={() => setPage(p)}>
+              <button
+                className={page === p ? "active" : ""}
+                onClick={() => setPage(p)}
+              >
                 {p.charAt(0).toUpperCase() + p.slice(1)}
               </button>
             </li>
@@ -776,11 +965,14 @@ export default function App() {
         {/* Mobile dropdown */}
         {menuOpen && (
           <div className="mobile-menu">
-            {["home", "about", "contact"].map(p => (
+            {["home", "about", "contact"].map((p) => (
               <button
                 key={p}
                 className={page === p ? "active" : ""}
-                onClick={() => { setPage(p); closeMenu(); }}
+                onClick={() => {
+                  setPage(p);
+                  closeMenu();
+                }}
               >
                 {p.charAt(0).toUpperCase() + p.slice(1)}
               </button>
@@ -789,8 +981,8 @@ export default function App() {
         )}
       </nav>
 
-      {page === "home"    && <Home navigate={setPage} />}
-      {page === "about"   && <About />}
+      {page === "home" && <Home navigate={setPage} />}
+      {page === "about" && <About />}
       {page === "contact" && <Contact />}
     </>
   );
