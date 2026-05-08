@@ -641,7 +641,6 @@ function About() {
               PERCENTAGE: <strong>74%</strong>
             </p>
           </div>
-          
         </div>
 
         <div className="card">
@@ -779,7 +778,8 @@ function Contact() {
 
       setStatus("success");
       setForm({ name: "", email: "", message: "" });
-    } catch {
+    } catch (err) {
+      console.error("EmailJS error:", err);
       setStatus("error");
     } finally {
       setLoading(false);
@@ -802,39 +802,72 @@ function Contact() {
         </div>
 
         <div className="contact-detail-card">
-  <div className="contact-icon">
-     <svg
-      width="22"
-      height="22"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect x="2" y="2" width="20" height="20" rx="6" ry="6" fill="#E1306C" />
-      <rect x="2" y="2" width="20" height="20" rx="6" ry="6" fill="url(#ig-grad)" />
-      <defs>
-        <linearGradient id="ig-grad" x1="0" y1="24" x2="24" y2="0" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#f09433" />
-          <stop offset="25%" stopColor="#e6683c" />
-          <stop offset="50%" stopColor="#dc2743" />
-          <stop offset="75%" stopColor="#cc2366" />
-          <stop offset="100%" stopColor="#bc1888" />
-        </linearGradient>
-      </defs>
-      <circle cx="12" cy="12" r="4.5" stroke="white" strokeWidth="1.8" fill="none" />
-      <circle cx="17.2" cy="6.8" r="1.2" fill="white" />
-      </svg>
-  </div>
-  <div>
-    
-    <div className="label">Instagram</div>
-    <div className="value">
-      <a href="https://www.instagram.com/sri_dharini21/" target="_blank" rel="noopener noreferrer">
-        @sri_dharini21
-      </a>
-    </div>
-  </div>
-</div>
+          <div className="contact-icon">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="6"
+                ry="6"
+                fill="#E1306C"
+              />
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="6"
+                ry="6"
+                fill="url(#ig-grad)"
+              />
+              <defs>
+                <linearGradient
+                  id="ig-grad"
+                  x1="0"
+                  y1="24"
+                  x2="24"
+                  y2="0"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset="0%" stopColor="#f09433" />
+                  <stop offset="25%" stopColor="#e6683c" />
+                  <stop offset="50%" stopColor="#dc2743" />
+                  <stop offset="75%" stopColor="#cc2366" />
+                  <stop offset="100%" stopColor="#bc1888" />
+                </linearGradient>
+              </defs>
+              <circle
+                cx="12"
+                cy="12"
+                r="4.5"
+                stroke="white"
+                strokeWidth="1.8"
+                fill="none"
+              />
+              <circle cx="17.2" cy="6.8" r="1.2" fill="white" />
+            </svg>
+          </div>
+          <div>
+            <div className="label">Instagram</div>
+            <div className="value">
+              <a
+                href="https://www.instagram.com/sri_dharini21/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @sri_dharini21
+              </a>
+            </div>
+          </div>
+        </div>
 
         <div className="contact-detail-card" style={{ gridColumn: "1 / -1" }}>
           <div className="contact-icon">💼</div>
