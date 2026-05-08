@@ -649,7 +649,7 @@ function About() {
           <div className="timeline-item">
             <h3>MERN Stack Intern</h3>
             <div className="org">SharpenedMind Tech</div>
-            <span className="date-badge">Dec 2025 – Mar 2026</span>
+            <span className="date-badge">Dec 2025 – Apr 2026</span>
             <ul>
               <li>
                 Implemented role-based authentication for Admin and Student
