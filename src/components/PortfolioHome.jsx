@@ -831,6 +831,8 @@ const styles = `
     .stats-row { grid-template-columns: 1fr 1fr; }
     .skills-grid { grid-template-columns: 1fr 1fr; }
   }
+
+
 `;
 
 // ─── HERO VIDEO with play/pause/mute controls ─────────────────
@@ -1267,7 +1269,9 @@ function Projects() {
      <div className="projects-grid" style={{ marginBottom: 28 }}>
   <div className="project-card">
     <h3>Student Result Management System</h3>
-    <span className="project-date">May 2026 – June 2026 · MERN Stack</span>
+    <span className="project-date">May 2026 – June 2026 · MERN Stack</span><br/>
+     <span className="project-date">Test Credentials (Teacher Login): Email: tharun@gmail.com, Password: 123456</span><br/>
+     <span className="project-date">Student Credentials (Student Login): Email:sridharini2103@gmail.com, class:1 , Section:A</span>
     <p>
       <a
         href="https://srmsfront.vercel.app/teacher/login"
@@ -1275,7 +1279,7 @@ function Projects() {
         rel="noopener noreferrer"
         className="project-link"
       >
-        🚀 Live Demo
+        🚀 Live Website
       </a>
     </p>
     <div className="project-video">
