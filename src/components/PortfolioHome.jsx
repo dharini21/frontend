@@ -1044,33 +1044,33 @@ function Home({ navigate }) {
               </ul>
             </div>
             <div className="project-card">
-          <h3>Doctor User Appointment System</h3>
-          <span className="project-date">
-            July 2024 – Sep 2024 · Node.js, Express.js, MongoDB
-          </span>
-          <ul>
-            <li>
-              Developed a full-stack doctor appointment management system using
-              Node.js, Express.js, and MongoDB.
-            </li>
-            <li>
-              Implemented authentication and authorization to secure user and
-              doctor access.
-            </li>
-            <li>
-              Designed role-based authentication allowing doctors to manage
-              appointments and users to book appointments.
-            </li>
-            <li>
-              Created RESTful APIs for user management, doctor profiles, and
-              appointment scheduling.
-            </li>
-            <li>
-              Integrated MongoDB database for efficient storage and management
-              of user, doctor, and appointment data.
-            </li>
-          </ul>
-        </div>
+              <h3>Doctor User Appointment System</h3>
+              <span className="project-date">
+                July 2024 – Sep 2024 · Node.js, Express.js, MongoDB
+              </span>
+              <ul>
+                <li>
+                  Developed a full-stack doctor appointment management system
+                  using Node.js, Express.js, and MongoDB.
+                </li>
+                <li>
+                  Implemented authentication and authorization to secure user
+                  and doctor access.
+                </li>
+                <li>
+                  Designed role-based authentication allowing doctors to manage
+                  appointments and users to book appointments.
+                </li>
+                <li>
+                  Created RESTful APIs for user management, doctor profiles, and
+                  appointment scheduling.
+                </li>
+                <li>
+                  Integrated MongoDB database for efficient storage and
+                  management of user, doctor, and appointment data.
+                </li>
+              </ul>
+            </div>
             <div className="project-card">
               <h3>Learning Management System</h3>
               <span className="project-date">
@@ -1098,7 +1098,7 @@ function Home({ navigate }) {
                 </li>
               </ul>
             </div>
-            
+
             <div className="project-card">
               <h3>Personal Portfolio Website</h3>
               <span className="project-date">Dec 2025 – Jun 2026</span>
@@ -1108,13 +1108,14 @@ function Home({ navigate }) {
                 </li>
                 <li>EmailJS integration for backend-free contact form.</li>
                 <li>
-              Implemented component-based architecture for reusability and
-              maintainability.
-            </li>
-            <li>
-              Optimized for all screen sizes using responsive design techniques.
-            </li>
-            <li>Deployed on Netlify for fast and reliable hosting.</li>
+                  Implemented component-based architecture for reusability and
+                  maintainability.
+                </li>
+                <li>
+                  Optimized for all screen sizes using responsive design
+                  techniques.
+                </li>
+                <li>Deployed on Netlify for fast and reliable hosting.</li>
               </ul>
             </div>
           </div>
@@ -1266,121 +1267,158 @@ function Projects() {
       <div className="card" style={{ marginBottom: 24 }}>
         <h2 className="section-title">Projects</h2>
       </div>
-     <div className="projects-grid" style={{ marginBottom: 28 }}>
-  <div className="project-card">
-    <h3>Student Result Management System</h3>
-    <span className="project-date">May 2026 – June 2026 · MERN Stack</span><br/>
-     <span className="project-date">Test Credentials (Teacher Login): Email: tharun@gmail.com, Password: 123456</span><br/>
-     <span className="project-date">Student Credentials (Student Login): Email:sridharini2103@gmail.com, class:1 , Section:A</span>
-    <p>
-      <a
-        href="https://srmsfront.vercel.app/teacher/login"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="project-link"
-      >
-        🚀 Live Website
-      </a>
-    </p>
-    <div className="project-video">
-      <iframe
-        src="https://drive.google.com/file/d/1AuD6yl4rUcZLTVM-7gYbPE_LVBLoVFy8/preview"
-        allow="autoplay"
-        title="Student Result Management System Demo"
-      ></iframe>
-    </div>
-    <ul>
-      <li>
-        Full-stack application with role-based authentication for Admin
-        and Students using JWT.
-      </li>
-      <li>
-        Built complete CRUD operations for managing admins, students,
-        subjects, and marks.
-      </li>
-      <li>
-        Designed modular backend architecture with structured Mongoose
-        models.
-      </li>
-      <li>
-        Established relationships between students, subjects, and marks
-        for efficient data handling.
-      </li>
-      <li>
-        Implemented automatic total marks calculation based on
-        subject-wise scores.
-      </li>
-      <li>
-        Built PDF marksheet generation and download functionality
-        dynamically.
-      </li>
-      <li>
-        Created responsive Admin and Student dashboards with real-time
-        data integration.
-      </li>
-    </ul>
-  </div>
-
-  <div className="project-card">
-    <h3>Learning Management System</h3>
-    <span className="project-date">Apr 2026 – May 2026 · MERN Stack</span>
-    <div className="project-video">
-      <iframe
-        src="https://drive.google.com/file/d/1hjHl-f3SagR3so7L466jDxIovclWSiqh/preview"
-        allow="autoplay"
-        title="Learning Management System Demo"
-      ></iframe>
-    </div>
-    <ul>
-      <li>
-        Developed a full-stack learning platform with enrollment
-        code-based access for students.
-      </li>
-      <li>
-        Implemented course and content management features for organizing
-        learning resources.
-      </li>
-      <li>
-        Created manual enrollment code generation and validation for
-        secure student access.
-      </li>
-      <li>
-        Integrated cloud drive links and embedded frames for seamless
-        content viewing.
-      </li>
-      <li>
-        Designed structured backend architecture with MongoDB models for
-        managing courses and resources.
-      </li>
-      <li>
-        Built responsive dashboards for admins and students with efficient
-        learning content management.
-      </li>
-    </ul>
-  </div>
+      <div className="projects-grid" style={{ marginBottom: 28 }}>
         <div className="project-card">
-          <h3>Personal Portfolio Website</h3>
-          <span className="project-date">Dec 2025 – Present · React.js</span>
+          <h3>Student Result Management System</h3>
+          <span className="project-date">
+            May 2026 – June 2026 · MERN Stack
+          </span>
+          <br />
+          <span className="project-date">
+            Test Credentials (Teacher Login): Email: tharun@gmail.com, Password:
+            123456
+          </span>
+          <br />
+          <span className="project-date">
+            Student Credentials (Student Login): Email:sridharini2103@gmail.com,
+            class:1 , Section:A
+          </span>
+          <p>
+            <a
+              href="https://srmsfront.vercel.app/teacher/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              🚀 Live Website
+            </a>
+          </p>
+          <div className="project-video">
+            <iframe
+              src="https://drive.google.com/file/d/1AuD6yl4rUcZLTVM-7gYbPE_LVBLoVFy8/preview"
+              allow="autoplay"
+              title="Student Result Management System Demo"
+            ></iframe>
+          </div>
           <ul>
             <li>
-              Developed a responsive portfolio using React.js with modern design
-              principles.
+              Full-stack application with role-based authentication for Admin
+              and Students using JWT.
             </li>
             <li>
-              Designed clean UI with focus on user experience and accessibility.
+              Built complete CRUD operations for managing admins, students,
+              subjects, and marks.
             </li>
             <li>
-              Integrated EmailJS for direct email communication without a
-              backend.
+              Designed modular backend architecture with structured Mongoose
+              models.
             </li>
             <li>
-              Implemented component-based architecture for reusability and
-              maintainability.
+              Established relationships between students, subjects, and marks
+              for efficient data handling.
             </li>
             <li>
-              Optimized for all screen sizes using responsive design techniques.
+              Implemented automatic total marks calculation based on
+              subject-wise scores.
             </li>
-            <li>Deployed on Netlify for fast and reliable hosting.</li>
+            <li>
+              Built PDF marksheet generation and download functionality
+              dynamically.
+            </li>
+            <li>
+              Created responsive Admin and Student dashboards with real-time
+              data integration.
+            </li>
+          </ul>
+        </div>
+        <div className="project-card">
+          <h3>Agricultural Marketplace & Farm Management System</h3>
+          <span className="project-date">Apr 2026 – May 2026 · MERN Stack</span>
+
+          <div className="project-video">
+            <iframe
+              src="https://drive.google.com/file/d/1PxVMRuJPVVenwT3jCArhHZ1bR5KpNtKe/preview"
+              allow="autoplay"
+              title="Agricultural Marketplace & Farm Management System Demo"
+            ></iframe>
+          </div>
+
+          <ul>
+            <li>
+              Developed a full-stack agricultural marketplace and farm
+              management web application using the MERN Stack.
+            </li>
+            <li>
+              Implemented secure role-based authentication and authorization for
+              administrators, farmers, and customers.
+            </li>
+            <li>
+              Built farmer dashboards to upload, manage, and update agricultural
+              products with image upload functionality.
+            </li>
+            <li>
+              Enabled customers to browse products, book farm services, and
+              submit reviews through an intuitive user interface.
+            </li>
+            <li>
+              Created admin modules for managing users, bookings, products, and
+              platform operations with complete CRUD functionality.
+            </li>
+            <li>
+              Designed a responsive, deployment-ready architecture with MongoDB,
+              Express.js, React.js, and Node.js for scalable performance.
+            </li>
+            <li>
+              Integrated RESTful APIs for seamless communication between the
+              frontend and backend with efficient data handling.
+            </li>
+            <li>
+              Optimized database queries and state management to provide faster
+              product browsing and booking experiences.
+            </li>
+            <li>
+              Followed a modular component-based architecture and Git version
+              control to ensure maintainable, scalable, and collaborative
+              development.
+            </li>
+          </ul>
+        </div>
+
+        <div className="project-card">
+          <h3>Learning Management System</h3>
+          <span className="project-date">Apr 2026 – May 2026 · MERN Stack</span>
+          <div className="project-video">
+            <iframe
+              src="https://drive.google.com/file/d/1hjHl-f3SagR3so7L466jDxIovclWSiqh/preview"
+              allow="autoplay"
+              title="Learning Management System Demo"
+            ></iframe>
+          </div>
+          <ul>
+            <li>
+              Developed a full-stack learning platform with enrollment
+              code-based access for students.
+            </li>
+            <li>
+              Implemented course and content management features for organizing
+              learning resources.
+            </li>
+            <li>
+              Created manual enrollment code generation and validation for
+              secure student access.
+            </li>
+            <li>
+              Integrated cloud drive links and embedded frames for seamless
+              content viewing.
+            </li>
+            <li>
+              Designed structured backend architecture with MongoDB models for
+              managing courses and resources.
+            </li>
+            <li>
+              Built responsive dashboards for admins and students with efficient
+              learning content management.
+            </li>
           </ul>
         </div>
         <div className="project-card">
@@ -1391,27 +1429,68 @@ function Projects() {
           <ul>
             <li>
               Developed a full-stack doctor appointment management system using
-              Node.js, Express.js, and MongoDB.
+              Node.js, Express.js, and MongoDB with a scalable RESTful
+              architecture.
             </li>
+
             <li>
-              Implemented authentication and authorization to secure user and
-              doctor access.
+              Implemented JWT-based authentication and role-based authorization
+              for users, doctors, and administrators.
             </li>
+
             <li>
-              Designed role-based authentication allowing doctors to manage
-              appointments and users to book appointments.
+              Designed secure login and registration workflows with password
+              hashing using bcrypt.
             </li>
+
             <li>
-              Created RESTful APIs for user management, doctor profiles, and
-              appointment scheduling.
+              Built RESTful APIs for user management, doctor profiles,
+              appointment booking, cancellation, and status updates.
             </li>
+
             <li>
-              Integrated MongoDB database for efficient storage and management
-              of user, doctor, and appointment data.
+              Developed appointment scheduling logic to prevent duplicate
+              bookings and manage doctor availability.
             </li>
+
             <li>
-              Built a secure backend architecture with proper validation and
-              error handling for reliable performance.
+              Integrated MongoDB with Mongoose for efficient schema design, data
+              validation, and database relationships.
+            </li>
+
+            <li>
+              Implemented middleware for authentication, authorization, request
+              validation, and centralized error handling.
+            </li>
+
+            <li>
+              Added input validation using Express Validator/Joi to improve data
+              integrity and application security.
+            </li>
+
+            <li>
+              Optimized database queries using indexing and efficient CRUD
+              operations for better performance.
+            </li>
+
+            <li>
+              Followed the MVC architecture to maintain clean, modular, and
+              reusable code.
+            </li>
+
+            <li>
+              Tested API endpoints using Postman to ensure functionality and
+              reliability.
+            </li>
+
+            <li>
+              Implemented pagination and filtering for doctor listings and
+              appointment history.
+            </li>
+
+            <li>
+              Enabled users to view, book, reschedule, and cancel appointments
+              through secure APIs.
             </li>
           </ul>
         </div>
@@ -1459,36 +1538,36 @@ function Contact() {
     if (errors[e.target.name]) setErrors({ ...errors, [e.target.name]: null });
   };
 
-// ...inside your component, replace handleSubmit with:
+  // ...inside your component, replace handleSubmit with:
 
-const handleSubmit = async () => {
-  const errs = validate();
-  if (Object.keys(errs).length) {
-    setErrors(errs);
-    return;
-  }
-  setLoading(true);
-  setStatus(null);
-  try {
-    await emailjs.send(
-      "service_ff1ostc",
-      "template_6scc1ng",
-      {
-        from_name: form.name,
-        from_email: form.email,
-        message: form.message,
-      },
-      { publicKey: "UFCMLnf7voMhou68h" }   // ✅ object, not a string
-    );
-    setStatus("success");
-    setForm({ name: "", email: "", message: "" });
-  } catch (err) {
-    console.error("EmailJS error:", err); // ✅ so you can actually see what failed
-    setStatus("error");
-  } finally {
-    setLoading(false);
-  }
-};
+  const handleSubmit = async () => {
+    const errs = validate();
+    if (Object.keys(errs).length) {
+      setErrors(errs);
+      return;
+    }
+    setLoading(true);
+    setStatus(null);
+    try {
+      await emailjs.send(
+        "service_ff1ostc",
+        "template_6scc1ng",
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+        },
+        { publicKey: "UFCMLnf7voMhou68h" }, // ✅ object, not a string
+      );
+      setStatus("success");
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("EmailJS error:", err); // ✅ so you can actually see what failed
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="page inner">
