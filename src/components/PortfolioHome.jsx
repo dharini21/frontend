@@ -1426,43 +1426,15 @@ function Projects() {
           <span className="project-date">
             July 2024 – Sep 2024 · Node.js, Express.js, MongoDB
           </span>
+          <div className="project-video">
+            <iframe
+              src="https://drive.google.com/file/d/1ABOw2EMhICWinRGdY_jCE0TKwuD2Z7qZ/preview"
+              allow="autoplay"
+              title="Doctor User Appointment System Demo"
+            ></iframe>
+          </div>
           <ul>
-            <li>
-              Developed a full-stack doctor appointment management system using
-              Node.js, Express.js, and MongoDB with a scalable RESTful
-              architecture.
-            </li>
-
-            <li>
-              Implemented JWT-based authentication and role-based authorization
-              for users, doctors, and administrators.
-            </li>
-
-            <li>
-              Designed secure login and registration workflows with password
-              hashing using bcrypt.
-            </li>
-
-            <li>
-              Built RESTful APIs for user management, doctor profiles,
-              appointment booking, cancellation, and status updates.
-            </li>
-
-            <li>
-              Developed appointment scheduling logic to prevent duplicate
-              bookings and manage doctor availability.
-            </li>
-
-            <li>
-              Integrated MongoDB with Mongoose for efficient schema design, data
-              validation, and database relationships.
-            </li>
-
-            <li>
-              Implemented middleware for authentication, authorization, request
-              validation, and centralized error handling.
-            </li>
-
+           
             <li>
               Added input validation using Express Validator/Joi to improve data
               integrity and application security.
@@ -1489,8 +1461,7 @@ function Projects() {
             </li>
 
             <li>
-              Enabled users to view, book, reschedule, and cancel appointments
-              through secure APIs.
+              git@github.com:dharini21/du.git - this is my git link
             </li>
           </ul>
         </div>
