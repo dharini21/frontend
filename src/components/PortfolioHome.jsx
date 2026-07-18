@@ -569,6 +569,21 @@ const styles = `
   background: #1d4ed8;
 }
 
+ .project-link2 {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #eb5d25;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.project-link2:hover {
+  background: #1d4ed8;
+}
+
   .project-video iframe {
     position: absolute;
     inset: 0;
@@ -1329,6 +1344,103 @@ function Projects() {
               Created responsive Admin and Student dashboards with real-time
               data integration.
             </li>
+            <li>
+              Frontend:
+              <a
+                href="https://github.com/dharini21/srmsfrontend"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SRMS Frontend
+              </a>
+              <br />
+              Backend:
+              <a
+                href="https://github.com/dharini21/srmsbackend"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SRMS Backend
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="project-card">
+          <h3>Doctor User Appointment System</h3>
+          <span className="project-date">
+            July 2024 – Sep 2024 · Mern Stack (Node.js, Express.js, MongoDB,
+            React.js)
+          </span>
+          <span className="project-date">
+            Patient Credentials <br />
+            Email: john.carter@example.com <br />
+            Phone Number: 9876543210 <br />
+            Password: Patient@123
+          </span>
+          <p>
+            <a
+              href="https://doctoruserappointmentsystem.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link2"
+            >
+              🚀 Live Website
+            </a>
+          </p>
+          <div className="project-video">
+            <iframe
+              src="https://drive.google.com/file/d/1ABOw2EMhICWinRGdY_jCE0TKwuD2Z7qZ/preview"
+              allow="autoplay"
+              title="Doctor User Appointment System Demo"
+            ></iframe>
+          </div>
+          <ul>
+            <li>
+              Added input validation using Express Validator/Joi to improve data
+              integrity and application security.
+            </li>
+
+            <li>
+              Optimized database queries using indexing and efficient CRUD
+              operations for better performance.
+            </li>
+            <li>
+              Implemented JWT-based authentication and role-based authorization
+              to secure user and doctor access.
+            </li>
+            <li>
+              Followed the MVC architecture to maintain clean, modular, and
+              reusable code.
+            </li>
+
+            <li>
+              Tested API endpoints using Postman to ensure functionality and
+              reliability.
+            </li>
+
+            <li>
+              Implemented pagination and filtering for doctor listings and
+              appointment history.
+            </li>
+            <li>
+              Backend:
+              <a
+                href="https://github.com/dharini21/doctoruserappointmentsystemBackend"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Doctor User Appointment System Backend
+              </a>
+              <br />
+              Frontend:
+              <a
+                href="https://github.com/dharini21/doctoruserappointmentsystem"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Doctor User Appointment System Frontend
+              </a>
+            </li>
           </ul>
         </div>
         <div className="project-card">
@@ -1368,19 +1480,6 @@ function Projects() {
               Designed a responsive, deployment-ready architecture with MongoDB,
               Express.js, React.js, and Node.js for scalable performance.
             </li>
-            <li>
-              Integrated RESTful APIs for seamless communication between the
-              frontend and backend with efficient data handling.
-            </li>
-            <li>
-              Optimized database queries and state management to provide faster
-              product browsing and booking experiences.
-            </li>
-            <li>
-              Followed a modular component-based architecture and Git version
-              control to ensure maintainable, scalable, and collaborative
-              development.
-            </li>
           </ul>
         </div>
 
@@ -1418,50 +1517,6 @@ function Projects() {
             <li>
               Built responsive dashboards for admins and students with efficient
               learning content management.
-            </li>
-          </ul>
-        </div>
-        <div className="project-card">
-          <h3>Doctor User Appointment System</h3>
-          <span className="project-date">
-            July 2024 – Sep 2024 · Node.js, Express.js, MongoDB
-          </span>
-          <div className="project-video">
-            <iframe
-              src="https://drive.google.com/file/d/1ABOw2EMhICWinRGdY_jCE0TKwuD2Z7qZ/preview"
-              allow="autoplay"
-              title="Doctor User Appointment System Demo"
-            ></iframe>
-          </div>
-          <ul>
-           
-            <li>
-              Added input validation using Express Validator/Joi to improve data
-              integrity and application security.
-            </li>
-
-            <li>
-              Optimized database queries using indexing and efficient CRUD
-              operations for better performance.
-            </li>
-
-            <li>
-              Followed the MVC architecture to maintain clean, modular, and
-              reusable code.
-            </li>
-
-            <li>
-              Tested API endpoints using Postman to ensure functionality and
-              reliability.
-            </li>
-
-            <li>
-              Implemented pagination and filtering for doctor listings and
-              appointment history.
-            </li>
-
-            <li>
-              git@github.com:dharini21/du.git - this is my git link
             </li>
           </ul>
         </div>
