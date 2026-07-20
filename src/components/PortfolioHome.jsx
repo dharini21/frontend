@@ -267,7 +267,7 @@ const styles = `
   }
 
   .hero-video-wrap video {
-    width: 100%;
+    width: 250%;
     height: 100%;
     object-fit: cover;
     display: block;
@@ -851,7 +851,7 @@ const styles = `
 `;
 
 // ─── HERO VIDEO with play/pause/mute controls ─────────────────
-// Drop your intro video into the project as /Intro_for_sri.mp4
+// Drop your intro video into the project as /sri intro.mp4
 // and it will render automatically. Until then a placeholder is shown.
 function HeroVideo() {
   const videoRef = useRef(null);
@@ -891,8 +891,8 @@ function HeroVideo() {
         <div className="hero-img-placeholder">
           <span className="icon">🎬</span>
           <span className="hint">
-            Add your intro video as <code>/Intro_for_sri.mp4</code> in the
-            project root and it will appear here.
+            Add your intro video as <code>/sri intro.mp4</code> in the project
+            root and it will appear here.
           </span>
         </div>
       </div>
@@ -903,7 +903,7 @@ function HeroVideo() {
     <div className="hero-video-wrap">
       <video
         ref={videoRef}
-        src="/Intro_for_sri.mp4"
+        src="/sri intro.mp4"
         playsInline
         onEnded={() => setPlaying(false)}
         onError={() => setErrored(true)}
@@ -973,15 +973,25 @@ function Home({ navigate }) {
             <div className="hero-eyebrow">Hello, I'm</div>
             <h1 className="hero-name">Sri Dharini S</h1>
             <p className="hero-tagline">
-              IT Graduate · MERN Stack Intern · Aspiring Developer
+              Motivated Junior Web Developer · MERN Stack Intern · Aspiring
+              Developer
             </p>
             <p className="hero-summary">
-              Results-driven IT graduate with hands-on experience in MERN stack
-              development and 10 months of industry experience at Neeyamo.
-              Demonstrated ability to develop full-stack applications, implement
-              secure authentication systems, and manage structured data
-              efficiently. Actively seeking an entry-level software development
-              role.
+              Motivated <strong>Junior Web Developer</strong> at{" "}
+              <strong>Sharpend Mind Tech</strong> with a successful transition
+              into software development through a
+              <strong> 6-month MERN Stack Internship</strong>, which led to a
+              full-time role in the same organization. Experienced in building
+              and deploying full-stack{" "}
+              <strong>web applications using the MERN stack</strong> ,
+              developing RESTful APIs, implementing secure authentication, and
+              creating responsive user interfaces. Previously worked as a{" "}
+              <strong>Verification Associate at </strong>
+              <strong>Neeyamo</strong>, where I developed strong analytical
+              skills, attention to detail, and a quality-focused approach.
+              Passionate about continuous learning, problem-solving, and
+              delivering scalable, user-centric web solutions while growing as a
+              software developer.
             </p>
             <div className="hero-btns">
               <button className="btn-primary" onClick={() => navigate("about")}>
@@ -1004,15 +1014,19 @@ function Home({ navigate }) {
                 },
                 {
                   icon: "💼",
-                  value: "10 Months",
-                  label: "Industry Experience",
+                  value: "1+ Year Experience",
+                  label: "Professional Experience",
                 },
                 {
                   icon: "</>",
                   value: "MERN Stack",
                   label: "Full Stack Development",
                 },
-                { icon: "🚀", value: "Aspiring", label: "Developer" },
+                {
+                  icon: "🚀",
+                  value: "Career Transition",
+                  label: "Verification → Web Development",
+                },
               ].map((s) => (
                 <div className="stat-card" key={s.value}>
                   <span className="stat-icon">{s.icon}</span>
@@ -1115,22 +1129,25 @@ function Home({ navigate }) {
             </div>
 
             <div className="project-card">
-              <h3>Personal Portfolio Website</h3>
+              <h3>Agricultural Marketplace & Farm Management System</h3>
               <span className="project-date">Dec 2025 – Jun 2026</span>
               <ul>
                 <li>
-                  Responsive React.js portfolio with clean, modern UI/UX design.
-                </li>
-                <li>EmailJS integration for backend-free contact form.</li>
-                <li>
-                  Implemented component-based architecture for reusability and
-                  maintainability.
+                  Developed a full-stack agricultural marketplace and farm
+                  management web application using the MERN Stack.
                 </li>
                 <li>
-                  Optimized for all screen sizes using responsive design
-                  techniques.
+                  Implemented secure role-based authentication and authorization
+                  for administrators, farmers, and customers.
                 </li>
-                <li>Deployed on Netlify for fast and reliable hosting.</li>
+                <li>
+                  Built farmer dashboards to upload, manage, and update
+                  agricultural products with image upload functionality.
+                </li>
+                <li>
+                  Enabled customers to browse products, book farm services, and
+                  submit reviews through an intuitive user interface.
+                </li>
               </ul>
             </div>
           </div>
