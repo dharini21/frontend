@@ -1240,9 +1240,38 @@ function About() {
         <div className="card">
           <h2 className="section-title">Experience</h2>
           <div className="timeline-item">
+            <h3>MERN Stack Developer</h3>
+            <div className="org">SharpenedMind Tech</div>
+            <span className="date-badge">Jul 2026 – Present</span>
+            <ul>
+              <li>
+                Developed full-stack web applications using the MERN stack
+                (MongoDB, Express.js, React.js, and Node.js).
+              </li>
+              <li>
+                Built and deployed real-world projects including a Learning
+                Management System, Personal Business Platform, Doctor User
+                Appointment System, and Student Result Management System.
+              </li>
+              <li>
+                Designed responsive React.js user interfaces and integrated
+                RESTful APIs for seamless frontend-backend communication.
+              </li>
+              <li>
+                Implemented JWT authentication, role-based authorization, CRUD
+                operations, and MongoDB database management.
+              </li>
+              <li>
+                Collaborated with the development team to debug, optimize
+                application performance, and deliver scalable, maintainable
+                solutions.
+              </li>
+            </ul>
+          </div>
+          <div className="timeline-item">
             <h3>MERN Stack Intern</h3>
             <div className="org">SharpenedMind Tech</div>
-            <span className="date-badge">Dec 2025 – Apr 2026</span>
+            <span className="date-badge">Dec 2025 – Jun 2026</span>
             <ul>
               <li>
                 Implemented JWT-based role authentication for Admin and Student
